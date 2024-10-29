@@ -13,7 +13,6 @@ def index():
 @app.route('/students', methods=['POST'])
 def post_students_details():
     try:
-        
         data = request.json
         dict_json = json.loads(json.dumps(data))
         database[dict_json["name"]] = dict_json["age"]
